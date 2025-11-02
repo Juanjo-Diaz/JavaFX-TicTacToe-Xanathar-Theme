@@ -1,12 +1,12 @@
-import javafx.application.Application; // App JavaFX principal
-import javafx.fxml.FXMLLoader; // Carga de FXML
-import javafx.scene.Scene; // Escena que contiene la UI
-import javafx.stage.Stage; // Ventana principal
-import javafx.scene.Parent; // Nodo raíz de la escena
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.scene.Parent;
 
-public class TicTacToe extends Application { // Clase de arranque de la app
+public class TicTacToe extends Application {
     @Override
-    public void start(Stage primaryStage) throws Exception { // Punto de entrada JavaFX
+    public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("TicTacToe.fxml"));
         Scene scene = new Scene(root, 1440, 1024); // le he cambiade el tamaño a la ventana para que se ajuste mejor el background al programa
         scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
