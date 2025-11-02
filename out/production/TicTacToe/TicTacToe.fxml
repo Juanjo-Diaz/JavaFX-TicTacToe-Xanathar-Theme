@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<!-- Contenedor vertical principal con estilos y controlador -->
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="TicTacToeController"
+      alignment="CENTER" spacing="15" stylesheets="styles.css">
+
+    <!-- Texto que muestra el turno o el resultado -->
+    <Text fx:id="statusText" text="Turno de X" styleClass="status-text"/>
+
+    <!-- Tablero 3x3 con separación entre celdas -->
+    <GridPane hgap="5" vgap="5" alignment="CENTER">
+        <!-- Fila 0 -->
+        <Button fx:id="b00" onAction="#handleMove" prefWidth="100" prefHeight="100"/>
+        <Button fx:id="b01" onAction="#handleMove" prefWidth="100" prefHeight="100" GridPane.columnIndex="1"/>
+        <Button fx:id="b02" onAction="#handleMove" prefWidth="100" prefHeight="100" GridPane.columnIndex="2"/>
+
+        <!-- Fila 1 -->
+        <Button fx:id="b10" onAction="#handleMove" prefWidth="100" prefHeight="100" GridPane.rowIndex="1"/>
+        <Button fx:id="b11" onAction="#handleMove" prefWidth="100" prefHeight="100" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Button fx:id="b12" onAction="#handleMove" prefWidth="100" prefHeight="100" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+
+        <!-- Fila 2 -->
+        <Button fx:id="b20" onAction="#handleMove" prefWidth="100" prefHeight="100" GridPane.rowIndex="2"/>
+        <Button fx:id="b21" onAction="#handleMove" prefWidth="100" prefHeight="100" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Button fx:id="b22" onAction="#handleMove" prefWidth="100" prefHeight="100" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+    </GridPane>
+
+    <!-- Botones de control: reiniciar y salir -->
+    <HBox alignment="CENTER" spacing="10">
+        <Button text="Reiniciar" onAction="#resetGame"/>
+        <Button text="Salir" onAction="#exitGame"/>
+    </HBox>
+</VBox>

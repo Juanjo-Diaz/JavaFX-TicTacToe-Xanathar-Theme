@@ -1,0 +1,22 @@
+/* Estilos globales para la app */
+.root { /* Contenedor raíz con imagen de fondo */
+    /* Imagen de fondo: Desktop1.png (debe estar en el classpath junto al FXML) */
+    -fx-background-image: url("Desktop1.png"); /* establece la imagen de fondo */
+    -fx-background-repeat: no-repeat; /* no repetir la imagen */
+    -fx-background-position: center center; /* centrar la imagen */
+    -fx-background-size: cover; /* cubrir toda la ventana manteniendo proporción */
+    -fx-background-color: #f4f4f9; /* color de respaldo */
+}
+
+/* Estilo base de todos los botones */
+.button { /* tamaño y color del texto de botones */
+    -fx-font-size: 24px; /* tamaño de fuente grande */
+    -fx-font-weight: bold; /* negrita */
+    -fx-text-fill: #fff; /* texto de botones en blanco */
+}
+
+/* Estilo del texto de estado (turno/resultado) */
+.status-text { /* apariencia del indicador de estado */
+    -fx-font-size: 20px; /* tamaño de fuente medio */
+    -fx-fill: #ffffff; /* texto del estado en blanco */
+}
